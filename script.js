@@ -55,6 +55,31 @@ gsap.registerPlugin(ScrollTrigger);
         });
 
 
+  // --- NOVO: ANIMAÇÃO 3: ONDA SVG APÓS O CARROSSEL ---
+
+        // Caminhos para a animação de "morph" do SVG Path:
+        // flatPath (Caminho inicial): Uma linha reta na base (y=100)
+        const flatPath = "M0,100 C150,100 280,100 500,100 C720,100 850,100 1000,100 L1000,100 L0,100 Z";
+        // wavePath (Caminho final): Uma onda com picos em y=50 e vales em y=150 (dentro do viewBox)
+        const wavePath = "M0,100 C150,50 280,150 500,100 C720,50 850,150 1000,100 L1000,100 L0,100 Z";
+
+
+        // 1. Define o caminho inicial (já feito no HTML, mas para garantir)
+        gsap.set("#wave-path", { attr: { d: flatPath } });
+
+        // 2. Cria a animação de onda
+        gsap.to("#wave-path", {
+            attr: { d: wavePath },
+            ease: "power1.inOut", 
+            scrollTrigger: {
+                trigger: ".horizontal-scroll-section", // O final do carrossel é o gatilho
+                start: "bottom top", // Começa quando a parte inferior do carrossel toca o topo da viewport
+                end: "bottom -=300", // Termina após rolar mais 300px
+                scrub: 1, // Liga o progresso da animação ao scroll
+            }
+        });
+
+
         // --- SCROLL SUAVE COM GSAP (extra, para mais controle) ---
         document.querySelectorAll("nav a").forEach(link => {
             link.addEventListener("click", e => {
@@ -62,4 +87,5 @@ gsap.registerPlugin(ScrollTrigger);
                 const target = document.querySelector(link.getAttribute("href"));
                 gsap.to(window, {duration: 3, scrollTo: target, ease: "power2.inOut"});
             });
+
         });
