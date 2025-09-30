@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom e Carrossel com GSAP (Ajustado)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#carrossel">Skills</a>
+        <a href="#conteudo">Conteúdo</a>
+    </nav>
+ 
+    <div id="inicio"></div>
+    <section class="zoom-section">
+        <h1>MIGUEL <br> MODENESE</h1>
+    </section>
+
+    <section id="carrossel" class="horizontal-scroll-section">
+        
+        <h2 class="static-title">SKILLS</h2>
+
+        <div class="cards-container">  
+            <div class="card">
+            <img src="img/ico-html.png" alt="">
+                <p class="text">HTML</p>
+            </div>
+            <div class="card">
+                <img src="img/ico-css.png" alt="">
+                <p class="text">CSS</p>
+            </div>
+            <div class="card">
+                <img src="img/ico-js.png" alt="">
+                <p class="text">JAVASCRIPT</p>
+            </div>
+            <div class="card">
+                <img src="img/ico-bootstrap.png" alt="">
+                <p class="text">BOOTSTRAP</p>
+            </div>
+            <div class="card">
+                <img src="img/resized/logo-phyton.png" alt="">
+                <p class="text">PHYTON</p>
+            </div>
+            <div class="card">
+                <img src="img/ico-photoshop.png" alt="">
+                <p class="text">PHOTHOSHOP</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="conteudo" class="content-section">
+        <h2>A Rolagem Vertical Normal Continua Aqui.</h2>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
+<script src="script.js"></script>
+
+
+    <!-- ScrollToPlugin para animação suave com GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+
+</body>
+</html>
+
+
+
