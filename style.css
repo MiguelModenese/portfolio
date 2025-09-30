@@ -125,6 +125,34 @@
         }
 
 
+#wave-section {
+            position: relative;
+            height: 100px; /* Altura para a seção da onda */
+            background-color: #111; /* Cor de fundo que corresponde ao carrossel */
+            z-index: 5; /* Garante que a onda fique acima do conteúdo, se necessário */
+        }
+
+        .wave-svg {
+            position: absolute;
+            bottom: 0; /* Coloca a onda na parte inferior da seção */
+            left: 0;
+            width: 100%;
+            height: 100px; 
+        }
+
+        #wave-path {
+            /* A cor da onda deve ser a cor de fundo da próxima seção para o efeito de transição */
+            fill: #1c1c1c; 
+        }
+
+        /* Ajusta a seção de conteúdo para ter uma cor de fundo diferente para o efeito da onda */
+        #conteudo {
+            background-color: #1c1c1c; 
+            min-height: 100vh;
+            padding: 50px;
+        }
+
+
         /* --- SEÇÃO 3: CONTEÚDO FINAL --- */
         .content-section {
             height: 100vh;
@@ -136,4 +164,5 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+
         }
