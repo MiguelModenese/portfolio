@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom e Carrossel com GSAP (Ajustado)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#carrossel">Skills</a>
+        <a href="#sobre-mim">Sobre Mim</a>
+        <a href="#conteudo">Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+ 
+    <div id="inicio"></div>
+    <section class="zoom-section">
+        <h1>MIGUEL <br> MODENESE</h1>
+    </section>
+
+    <section id="carrossel" class="horizontal-scroll-section">
+        
+        <h2 class="static-title">SKILLS</h2>
+
+        <div class="cards-container">  
+            <div class="card">
+            <img src="img/ico-html.png" alt="">
+                <p class="text">HTML</p>
+            </div>
+            <div class="card">
+                <img src="img/ico-css.png" alt="">
+                <p class="text">CSS</p>
+            </div>
+            <div class="card">
+                <img src="img/ico-js.png" alt="">
+                <p class="text">JAVASCRIPT</p>
+            </div>
+            <div class="card">
+                <img src="img/ico-bootstrap.png" alt="">
+                <p class="text">BOOTSTRAP</p>
+            </div>
+            <div class="card" id="py">
+                <img src="img/logo-phyton.png" alt="">
+                <p class="text">PHYTON</p>
+            </div>
+            <div class="card">
+                <img src="img/ico-photoshop.png" alt="">
+                <p class="text">PHOTHOSHOP</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mim" class="content-section">
+        <h3>Sobre Mim</h3>
+        <div class="sobre-content">
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat corrupti sapiente unde necessitatibus qui laboriosam consectetur natus perferendis dicta in! Veniam quas pariatur itaque quis laudantium voluptatibus illo accusamus aperiam?</p>
+            </div>
+            <div class="image">
+                <img src="img/" alt="">
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="conteudo" class="content-section">
+        <h3>PROJETOS</h3>
+    
+        <div class="card1-container">
+            <div class="project">
+                <p class="text">Mundo Pet</p>
+                <img src="img/mundo-pet.png" alt="Imagem do Projeto 1">
+                
+                <div class="project-details">
+                    <h4>Site Mundo Pet</h4>
+                    <p>Site de um pet shop fictício utilizado para praticar o web-design tecnologias que foram usadas HTML, CSS e JavaScript.</p>
+                    <a href="https://github.com/MiguelModenese/mundo-pet" class="github-link" target="_blank">
+                        Ver no GitHub
+                    </a>
+                </div>
+                </div>
+    
+            <div class="project">
+                <p class="text">Jogo da Memoria</p>
+                <img src="img/jogo-memoria.png" alt="Imagem do Projeto 2">
+                
+                <div class="project-details">
+                    <h4>Jogo da Memoria </h4>
+                    <p>Site com jogo da memoria feito em JavaScript html e css, Fiz esse site com intuito de aprimorar minhas habilidades no css, foquei principalmente no estilo do site</p>
+                    <a href="https://github.com/MiguelModenese/jogo" class="github-link" target="_blank">
+                        Ver no GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="content-section">
+        <h3>CONTATO</h3>
+
+        <div class="contato-content">
+            <button class="butao">
+                    <a href="https://github.com/MiguelModenese" target="_blank">
+                        <img width="64" height="64" src="https://img.icons8.com/windows/64/github.png" alt="github"/>GitHub
+                    </a>
+            </button>
+
+            <button class="butao">
+                    <a href="https://www.instagram.com/miguel_modenese/" target="_blank">
+                        <img width="64" height="64" src="https://img.icons8.com/windows/64/instagram-new.png" alt="instagram-new"/>Instagram
+                    </a>
+            </button>
+
+            <button class="butao">
+                    <a href="https://www.linkedin.com/in/miguel-modenese" target="_blank">
+                        <img width="64" height="64" src="https://img.icons8.com/windows/64/linkedin.png" alt="linkedin"/>LinkedIn
+                    </a>
+            </button>
+            
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
+<script src="script.js"></script>
+
+
+    <!-- ScrollToPlugin para animação suave com GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,332 @@
+        /* CSS BÁSICO E ESTILIZAÇÃO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111;
+            color: #eee;
+            scroll-behavior: smooth;
+            /* Scroll suave nativo */
+        }
+
+
+        /* --- MENU FIXO --- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+        }
+
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+
+        nav a:hover {
+            color: #ffffffd3;
+        }
+
+
+        /* --- SEÇÃO 1: ANIMAÇÃO DE ZOOM --- */
+        .zoom-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+
+        .zoom-section h1 {
+            font-size: 8vw;
+            font-weight: 800;
+            text-align: center;
+            line-height: 1.1;
+            color: #f0f0f0;
+            transform: scale(1);
+        }
+
+
+        /* --- SEÇÃO 2: CARROSSEL HORIZONTAL --- */
+        .horizontal-scroll-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+
+        .cards-container {
+            width: max-content;
+            display: flex;
+            gap: 100px;
+            padding: 0 80px;
+        }
+
+
+        .card {
+            justify-content: center;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(83, 83, 83, 0.151);
+            border: 1px solid rgba(255, 255, 255, 0.096);
+            border-radius: 15px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+
+
+
+.card img{
+    width: auto;
+    height: auto;
+    margin: 30px;
+    filter: invert(100%);
+}
+
+ #py img{
+    filter: brightness(100);
+}
+
+
+        .card .text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .static-title {
+            position: absolute;
+            top: 15%;
+            /* Ajuste a distância do topo conforme necessário */
+            left: 50%;
+            transform: translateX(-50%);
+            /* Centraliza o título horizontalmente */
+            color: white;
+            /* Escolha a cor que desejar */
+            font-size: 2.5rem;
+            /* Ajuste o tamanho da fonte */
+            z-index: 10;
+            /* Garante que o título fique sobre os cards */
+            text-align: center;
+            width: 100%;
+        }
+
+
+        /* --- SEÇÃO 3: CONTEÚDO FINAL --- */
+        .content-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h3{
+            color: white;
+            /* Escolha a cor que desejar */
+            font-size: 2.5rem;
+            /* Ajuste o tamanho da fonte */
+            z-index: 10;
+            /* Garante que o título fique sobre os cards */
+            text-align: center;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .card1-container{
+            display: flex;
+            width: 100%;
+            gap: 2vw;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Existing CSS for .project is fine, but we'll add positioning context */
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Added: Crucial for positioning the absolute overlay */
+    position: relative;
+    /* Added: Sets the stage for a smooth transition on hover */
+    overflow: hidden; 
+    cursor: pointer; /* Indicates interactivity */
+}
+
+.text{
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+.project img {
+    width: 600px;
+    /* Added: Smooth transition for any changes to the image on hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* NEW: Styles for the details overlay */
+.project-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Dark, semi-transparent background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Initial State: Start invisible/scaled down and outside the flow */
+    opacity: 0;
+    transform: scale(0.8);
+    /* Transition: Animates opacity and scale for a smooth reveal */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.project-details h4 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.project-details p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* NEW: Styles for the GitHub link button */
+.github-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #555; /* Neutral button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    font-weight: bold;
+}
+
+.github-link:hover {
+    background-color: #0077b5; /* GitHub blue on hover */
+}
+
+
+/* NEW: Hover Effect */
+.project:hover .project-details {
+    /* Final State: Full opacity and original size */
+    opacity: 1;
+    transform: scale(1);
+}
+
+.project:hover img {
+    /* Optional: Slightly scale the image down or darken it when hovering */
+    transform: scale(1.05);
+    filter: brightness(0.6);
+}
+
+
+/* 1. Estilos para o contêiner dos botões (Alterado para Coluna) */
+.contato-content {
+    display: flex;
+    /* CHAVE: Organiza os itens verticalmente (um em cima do outro) */
+    flex-direction: column; 
+    
+    /* CHAVE: Faz com que os botões preencham a largura total do contêiner */
+    align-items: stretch; 
+    
+    /* Espaço vertical entre os botões */
+    gap: 15px; 
+    
+    /* Define a largura máxima do bloco de botões */
+    max-width: 350px; 
+    width: 90%; /* Responsividade */
+}
+
+/* 2. Estilos para o botão (elemento <button>) */
+.butao {
+    /* Não precisa mais de flex: 1 1 200px; porque o width: 100% resolve */
+    
+    /* Estilo básico do botão */
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px 10px; /* Aumentei o padding vertical para ficar mais espaçoso */
+    width: 100%; /* Garante que todos ocupem a largura máxima do contato-content */
+    
+    /* Adiciona uma transição para a animação do hover */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+}
+
+/* Animação de hover */
+.butao:hover {
+    background-color:#ffffffd3;
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: #dfdfdf;
+}
+
+/* 3. Estilos para o link (elemento <a>) dentro do botão (Mantidos, mas melhor centralizados) */
+.butao a {
+    display: flex;
+    /* Alinha o ícone e o texto horizontalmente */
+    flex-direction: column; 
+    /* Centraliza o ícone e o texto no botão */
+    align-items: center; 
+    justify-content: center;
+    
+    text-decoration: none; 
+    color: #333; 
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* 4. Estilos para a imagem (ícone) */
+.butao img {
+    width: 48px; 
+    height: 48px;
+    margin-bottom: 10px; 
+    transition: transform 0.3s;
+}
+
+/* Animação de hover no ícone */
+.butao:hover img {
+    transform: scale(1.1); 
+}
+
+.sobre-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+}
+
+.sobre-content .text{
+    flex: 1 1 40%;
+}
+
